@@ -13,22 +13,23 @@ const App = () => {
   };
 
   return (
-    <div>
-      <Router>
+    <div className='container'>
+      
         
       <SavedList list={savedList} />
 
      
       
-
-      <Route path='/' component={MovieList}/>
-      <Route path='./Movies/:id' render={props =>
-      {const { id } = props.match.params; 
-      return <Movie />
-      }
-      }/>
-      
-      </Router> 
+      <div>
+      <Route path='/movies/:id'>
+        <Movie />
+      </Route>
+      </div>
+      <div>
+        <Route path='/'>
+          <MovieList />
+        </Route>
+      </div>
     </div>
   );
 };
