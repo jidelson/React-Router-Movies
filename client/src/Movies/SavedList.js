@@ -1,4 +1,9 @@
 import React from 'react';
+import {BrowserRouter as Router, Route, Switch, Link } from 'react-router-dom';
+
+function goBack() {
+  window.history.back();
+}
 
 const SavedList = props => (
   <div className="saved-list">
@@ -7,7 +12,11 @@ const SavedList = props => (
       <span className="saved-movie">{movie.title}</span>
     ))}
     <div className="home-button">
-      <button>Home</button>
+     <Route path='/movies'></Route>
+      
+      
+      <button onClick="goBack()">Home</button>
+      
     </div>
   </div>
 );

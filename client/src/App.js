@@ -15,11 +15,7 @@ const App = () => {
   return (
     <div className='container'>
       
-        
       <SavedList list={savedList} />
-
-     
-      
       <div>
       <Route path='/movies/:id'>
         <Movie />
